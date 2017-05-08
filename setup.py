@@ -28,8 +28,8 @@ parsed_test_requirements = parse_requirements(
 )
 
 
-requirements = [str(ir.req) for ir in parsed_requirements]
-test_requirements = [str(tr.req) for tr in parsed_test_requirements]
+requirements = [str(ir.req) for ir in parsed_requirements if ir.req and not str(ir.req).startswith(('-', '#'))]
+test_requirements = [str(tr.req) for tr in parsed_test_requirements if tr.req and not str(tr.req).startswith(('-', '#'))]
 
 
 setup(

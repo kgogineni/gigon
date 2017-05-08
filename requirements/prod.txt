@@ -1,1 +1,13 @@
-apiwrapper
+#apiwrapper
+
+#rest server
+
+bottle
+requests
+paste
+
+#database
+pymongo
+
+#tests - mock
+flexmock
