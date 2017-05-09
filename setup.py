@@ -11,21 +11,18 @@ except ImportError:
     from distutils.core import setup
 
 
+
 with open('README.rst') as readme_file:
     readme = readme_file.read()
 
 with open('HISTORY.rst') as history_file:
     history = history_file.read().replace('.. :changelog:', '')
 
-parsed_requirements = parse_requirements(
-    'requirements/prod.txt',
-    session=pip.download.PipSession()
-)
+prod_req_file = 'requirements/prod.txt'
+parsed_requirements = parse_requirements(prod_req_file, session=pip.download.PipSession())
 
-parsed_test_requirements = parse_requirements(
-    'requirements/test.txt',
-    session=pip.download.PipSession()
-)
+test_req_file = 'requirements/test.txt'
+parsed_test_requirements = parse_requirements(test_req_file, session=pip.download.PipSession())
 
 
 requirements = [str(ir.req) for ir in parsed_requirements if ir.req and not str(ir.req).startswith(('-', '#'))]
