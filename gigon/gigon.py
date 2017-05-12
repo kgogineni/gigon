@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import logging
+from server import GigonServer
 
 #import bottle
 
@@ -8,31 +9,16 @@ logger = logging.getLogger(__name__)
 class Gigon(object):
     def __init__(self):
         print('Initializing the Caster...')
-        if logger.isEnabledFor(logging.DEBUG):
-            self.debug = True
-        else:
-            self.debug = False
 
-        self.__init_bottle()
-        pass
+        # we will piggy back on the logger configuration
+        self.debug = True if logger.isEnabledFor(logging.DEBUG) else False
+        self.server = GigonServer()
 
-    def __init_bottle(self):
-        #self.app = bottle.app()
-        self.port = 8080
-        self.host = 'localhost'
-        self.webroot = 'http://%s:%d/' % (self.host, self.port)
 
-    def start(self):
-        print('Starting the Caster...!')
-        self.setup_routes()
-        #bottle.run(self.app, host=self.host, port=self.port, debug=self.debug, server='paste')
+    def bootstrap(self):
+        self.server.start()  # start the api server
 
-    def setup_routes(self):
-        pass
 
-        #rt_manager = RouteManager()
-        # get requests
-        #rt_manager.addRoute('/', 'GET', rt_manager.getIndex)
-        #rt_manager.addRoute('/caster', 'GET', rt_manager.getIndex)
-        # rt_manager.addRoute('/meds', 'GET', MedsList().listmeds)
-
+if __name__ == '__main__':
+    gigon = Gigon()
+    gigon.bootstrap()
