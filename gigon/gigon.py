@@ -4,11 +4,14 @@ from server import GigonServer
 
 #import bottle
 
+logging.basicConfig(filename='conf/logging.conf')
+
 logger = logging.getLogger(__name__)
+
 
 class Gigon(object):
     def __init__(self):
-        print('Initializing the Caster...')
+        print('Initializing the Webserver...')
 
         # we will piggy back on the logger configuration
         self.debug = True if logger.isEnabledFor(logging.DEBUG) else False
