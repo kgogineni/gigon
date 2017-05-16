@@ -28,17 +28,17 @@ Follow the instructions below:
 
 | On Linux, or if not using Homebrew on OS X it can easily be installed via curl:
 
-| ``$ mkdir $HOME/.bin/
-| $ export PATH=\$PATH:$HOME/.bin/repo >> $HOME/.profile
-| $ curl https://storage.googleapis.com/git-repo-downloads/repo > $HOME/.bin/repo
-| $ chmod a+x $HOME/.bin/repo``
+| ``$ mkdir $HOME/.bin/``
+| ``$ export PATH=\$PATH:$HOME/.bin/repo >> $HOME/.profile``
+| ``$ curl https://storage.googleapis.com/git-repo-downloads/repo > $HOME/.bin/repo``
+| ``$ chmod a+x $HOME/.bin/repo``
 
 pull the source code
 ====================
-| `` $ mkdir <worksapce-dir>
-| $ cd <workspace-dir>
-| $ repo init -u git@https://github.com/kgogineni/manifest.git
-| $ repo sync``
+| ``$ mkdir <worksapce-dir>``
+| ``$ cd <workspace-dir>``
+| ``$ repo init -u git@https://github.com/kgogineni/manifest.git``
+| ``$ repo sync``
 
 
 Features
