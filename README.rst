@@ -36,10 +36,10 @@ $ chmod a+x $HOME/.bin/repo``
 
 pull the source code
 ====================
-``$ mkdir <worksapce-dir>::
-$ cd <workspace-dir>::
-$ repo init -u git@https://github.com/kgogineni/manifest.git::
-$ repo sync``
+``| $ mkdir <worksapce-dir>
+| $ cd <workspace-dir>::
+| $ repo init -u git@https://github.com/kgogineni/manifest.git::
+| $ repo sync``
 
 
 Features
