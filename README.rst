@@ -34,6 +34,14 @@ $ export PATH=\$PATH:$HOME/.bin/repo >> $HOME/.profile
 $ curl https://storage.googleapis.com/git-repo-downloads/repo > $HOME/.bin/repo
 $ chmod a+x $HOME/.bin/repo``
 
+pull the source code
+====================
+``$ mkdir <worksapce-dir>
+$ cd <workspace-dir>
+$ repo init -u git@https://github.com/kgogineni/manifest.git
+$ repo sync``
+
+
 Features
 --------
 
