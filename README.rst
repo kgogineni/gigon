@@ -18,6 +18,21 @@ gigon
 * Free software: ISC license
 * Documentation: https://gigon.readthedocs.org.
 
+Dev Setup
+---------
+The gigon repository needs additional sources, requires to use repo tool.
+
+Follow the instructions below:
+
+On OS X Repo is available from Homebrew with a simple $ brew install repo.
+
+On Linux, or if not using Homebrew on OS X it can easily be installed via curl:
+
+$ mkdir $HOME/.bin/
+$ export PATH=\$PATH:$HOME/.bin/repo >> $HOME/.profile
+$ curl https://storage.googleapis.com/git-repo-downloads/repo > $HOME/.bin/repo
+$ chmod a+x $HOME/.bin/repo
+
 Features
 --------
 
