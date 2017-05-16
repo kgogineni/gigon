@@ -24,7 +24,8 @@ The gigon repository needs additional sources, requires to use repo tool.
 
 Follow the instructions below:
 
-On OS X Repo is available from Homebrew with a simple $ brew install repo.
+On OS X run
+'''brew install repo''' (Installation of Homebrew is required if not already installed)
 
 On Linux, or if not using Homebrew on OS X it can easily be installed via curl:
 
