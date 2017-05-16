@@ -25,14 +25,14 @@ The gigon repository needs additional sources, requires to use repo tool.
 Follow the instructions below:
 
 On OS X run
-'''brew install repo''' (Installation of Homebrew is required if not already installed)
+``brew install repo`` (Installation of Homebrew is required if not already installed)
 
 On Linux, or if not using Homebrew on OS X it can easily be installed via curl:
 
-$ mkdir $HOME/.bin/
+``$ mkdir $HOME/.bin/
 $ export PATH=\$PATH:$HOME/.bin/repo >> $HOME/.profile
 $ curl https://storage.googleapis.com/git-repo-downloads/repo > $HOME/.bin/repo
-$ chmod a+x $HOME/.bin/repo
+$ chmod a+x $HOME/.bin/repo``
 
 Features
 --------
